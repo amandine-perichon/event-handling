@@ -57,6 +57,9 @@ function changeDivColor (id, colorEnter, colorLeave) {
   elem.addEventListener('mouseleave', makeColor(colorLeave));
 }
 
+
+// Function to change the text of a div
+
 function changeDivText (id) {
   var elem = document.getElementById(id);
   elem.addEventListener('click', addText)
