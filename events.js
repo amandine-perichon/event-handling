@@ -9,7 +9,7 @@ function start () {
   changeDivColor('one', 'blue', 'white');
   changeDivColor('two', 'green', 'white');
   changeDivColor('three', 'orange', 'white');
-    
+  changeDivText('four');
   // Your turn! Create a new function called `two`, then call it from here.
 }
 
@@ -56,3 +56,17 @@ function changeDivColor (id, colorEnter, colorLeave) {
   elem.addEventListener('mouseenter', makeColor(colorEnter));
   elem.addEventListener('mouseleave', makeColor(colorLeave));
 }
+
+function changeDivText (id) {
+  var elem = document.getElementById(id);
+  elem.addEventListener('click', addText)
+}
+
+function addText (evt) {
+  console.log()
+  if (evt.target.innerHTML === "") {
+    evt.target.innerHTML = "This is not a div";
+  } else {
+    evt.target.innerHTML = "";
+  }
+  }
